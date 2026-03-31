@@ -1,0 +1,58 @@
+/* App Shell Layout */
+.app-shell {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: var(--gradient-bg);
+  overflow: hidden;
+  position: relative;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ambient Background Glows */
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+.bg-glow--1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(124,110,247,0.22) 0%, transparent 70%);
+  top: -200px; left: -100px;
+  animation: floatGlow1 12s ease-in-out infinite alternate;
+}
+.bg-glow--2 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(240,108,155,0.16) 0%, transparent 70%);
+  bottom: -150px; right: -100px;
+  animation: floatGlow2 15s ease-in-out infinite alternate;
+}
+.bg-glow--3 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(62,207,178,0.12) 0%, transparent 70%);
+  top: 40%; left: 40%;
+  animation: floatGlow3 18s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(40px, 30px) scale(1.1); }
+}
+@keyframes floatGlow2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-30px, -40px) scale(1.15); }
+}
+@keyframes floatGlow3 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(20px, -20px) scale(0.9); }
+}

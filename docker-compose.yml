@@ -1,0 +1,9 @@
+services:
+  choreboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: choreboard-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
