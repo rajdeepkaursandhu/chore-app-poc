@@ -11,7 +11,7 @@
 
 ### *A premium office task management dashboard — assign, schedule, and track team chores with a beautiful, Outlook-like calendar.*
 
-[![Demo GIF](docs/screenshots/demo.gif)](https://github.com/rajdeepkaursandhu/chore-app)
+[![Demo GIF](docs/screenshots/demo.gif)](https://github.com/rajdeepkaursandhu/chore-app-poc)
 
 </div>
 
@@ -62,8 +62,8 @@ Designed to be deployed on an internal office screen or shared browser, it gives
 
 ```bash
 # Clone the repo
-git clone https://github.com/rajdeepkaursandhu/chore-app.git
-cd chore-app
+git clone https://github.com/rajdeepkaursandhu/chore-app-poc.git
+cd chore-app-poc
 
 # Build and launch (first run takes ~60s)
 docker compose up -d --build
@@ -99,7 +99,7 @@ Container:    Docker multi-stage build
 ### Project Structure
 
 ```
-chore-app/
+chore-app-poc/
 ├── Dockerfile                  # Multi-stage: Node builder → Nginx runner
 ├── docker-compose.yml          # Exposes on localhost:8080
 ├── nginx.conf                  # SPA routing, gzip, 1yr asset cache
